@@ -22,9 +22,29 @@
     <div>
       <label for="inorganicOption">Inorganic</label>
       <input type="radio" id="inorganicOption" name="ganic" />
-      <br>
+      <br />
       <label for="organicOption">Organic</label>
       <input type="radio" id="organicOption" name="ganic" />
     </div>
+    <br />
+    <br />
+    <div>
+      <button id="goToCartPageButton" onclick="goToCartPage()">
+        Go To Cart
+      </button>
+
+      <button id="goToProductsPageButton" onclick="goToProductsPage()">
+        Go To Products
+      </button>
+    </div>
+    <script>
+      function goToProductsPage() {
+        window.location.href = "Products.html";
+      }
+
+      function goToCartPage() {
+        window.location.href = "Cart.html";
+      }
+    </script>
   </body>
 </html>

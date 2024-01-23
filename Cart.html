@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="basket">
+      <textarea id="currentBasket" cols="30" rows="10"></textarea>
+    </div>
+
+    <br />
+    <br />
+    <div>
+      <button id="goToProductsPageButton" onclick="goToProductsPage()">
+        Go To Products
+      </button>
+      <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
+        Go To Customer
+      </button>
+    </div>
+
+    <script>
+      var currentBasket = document.getElementById("currentBasket");
+      items = localStorage.getItem("basket").split(",");
+      window.onload = (event) => {
+        for (var i = 0; i < items.length; i++) {
+          currentBasket.innerHTML += items[i] + "\n";
+        }
+      };
+
+      function goToProductsPage() {
+        window.location.href = "Products.html";
+      }
+
+      function goToCustomerPage() {
+        window.location.href = "Customer.html";
+      }
+    </script>
+  </body>
+</html>
