@@ -6,37 +6,47 @@
     <title>Customer Page</title>
   </head>
   <body>
-    <div>
-      <input type="checkbox" id="vegetarianOption" />
-      <label for="vegetarianOption">Are you vegetarian?</label>
-    </div>
-    <br />
-    <div>
-      <input type="checkbox" id="glutenOption" />
-      <label for="glutenOption">Are you allergic to gluten?</label>
-    </div>
-    <br />
-    <div>
-      <label>Would you prefer inorganic or organic products?</label>
-    </div>
-    <div>
-      <label for="inorganicOption">Inorganic</label>
-      <input type="radio" id="inorganicOption" name="ganic" />
-      <br />
-      <label for="organicOption">Organic</label>
-      <input type="radio" id="organicOption" name="ganic" />
-    </div>
-    <br />
-    <br />
-    <div>
-      <button id="goToCartPageButton" onclick="goToCartPage()">
-        Go To Cart
-      </button>
+    <center>
+      <div>
+        <input type="checkbox" id="vegetarianOption" />
+        <label for="vegetarianOption">Are you vegetarian?</label>
+      </div>
 
-      <button id="goToProductsPageButton" onclick="goToProductsPage()">
-        Go To Products
-      </button>
-    </div>
+      <br />
+
+      <div>
+        <input type="checkbox" id="glutenOption" />
+        <label for="glutenOption">Are you allergic to gluten?</label>
+      </div>
+
+      <br />
+
+      <div>
+        <label>Would you prefer inorganic or organic products?</label>
+      </div>
+
+      <div>
+        <label for="inorganicOption">Inorganic</label>
+        <input type="radio" id="inorganicOption" name="ganic" />
+        <br />
+        <label for="organicOption">Organic</label>
+        <input type="radio" id="organicOption" name="ganic" />
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <button id="goToCartPageButton" onclick="goToCartPage()">
+          Go To Cart
+        </button>
+
+        <button id="goToProductsPageButton" onclick="goToProductsPage()">
+          Go To Products
+        </button>
+      </div>
+    </center>
+
     <script>
       function goToProductsPage() {
         window.location.href = "Products.html";

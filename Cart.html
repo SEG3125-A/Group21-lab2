@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body>
-    <div id="basket">
-      <textarea id="currentBasket" cols="30" rows="10"></textarea>
-    </div>
 
-    <br />
-    <br />
-    <div>
-      <button id="goToProductsPageButton" onclick="goToProductsPage()">
-        Go To Products
-      </button>
-      <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
-        Go To Customer
-      </button>
-    </div>
+  <body>
+    <center>
+      <div id="basket">
+        <textarea id="currentBasket" cols="40" rows="20"></textarea>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <button id="goToProductsPageButton" onclick="goToProductsPage()">
+          Go To Products
+        </button>
+        <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
+          Go To Customer
+        </button>
+      </div>
+
+      <br />
+      <br />
+
+      <div>
+        <button id="resetButton" onclick="resetCart()">Reset Cart</button>
+      </div>
+    </center>
 
     <script>
       var currentBasket = document.getElementById("currentBasket");
@@ -36,6 +47,11 @@
 
       function goToCustomerPage() {
         window.location.href = "Customer.html";
+      }
+
+      function resetCart() {
+        currentBasket.innerHTML = "";
+        localStorage.setItem("basket", "");
       }
     </script>
   </body>

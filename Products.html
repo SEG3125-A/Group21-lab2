@@ -5,53 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
+
   <body>
-    <div id="store name">
-      <center>
-        <h1>HamNal Grocer Co.</h1>
-      </center>
-    </div>
+    <center>
+      <div id="store name">
+        <center>
+          <h1>HamNal Grocer Co.</h1>
+        </center>
+      </div>
 
-    <div>
-      <button onclick="addToBasket(this)" id="item1" value="10">$10 - Chicken</button>
+      <div>
+        <button onclick="addToBasket(this)" id="item1" value="10">
+          $10 - Chicken
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item2" value="8">
+          $8 - Beef
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item3" value="6">
+          $6 - Blue Berries
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item4" value="4">
+          $4 - Apples
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item5" value="2">
+          $2 - Soft Drink
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item6" value="1">
+          $1 - Candy
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item7" value="3">
+          $3 - Loaf of Bread
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item8" value="5">
+          $5 - Cake
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item9" value="7">
+          $7 - Granola Bar
+        </button>
+        <br />
+        <button onclick="addToBasket(this)" id="item10" value="9">
+          $9 - Beyond Meat Burger
+        </button>
+      </div>
       <br />
-      <button onclick="addToBasket(this)" id="item2" value="8">$8 - Beef</button>
       <br />
-      <button onclick="addToBasket(this)" id="item3" value="6">$6 - Blue Berries</button>
+      <div>
+        <button id="submitCartButton" onclick="submitBasket()">
+          Submit Cart
+        </button>
+      </div>
       <br />
-      <button onclick="addToBasket(this)" id="item4" value="4">$4 - Apples</button>
       <br />
-      <button onclick="addToBasket(this)" id="item5" value="2">$2 - Soft Drink</button>
-      <br />
-      <button onclick="addToBasket(this)" id="item6" value="1">$1 - Candy</button>
-      <br />
-      <button onclick="addToBasket(this)" id="item7" value="3">$3 - Loaf of Bread</button>
-      <br />
-      <button onclick="addToBasket(this)" id="item8" value="5">$5 - Cake</button>
-      <br />
-      <button onclick="addToBasket(this)" id="item9" value="7">$7 - Granola Bar</button>
-      <br />
-      <button onclick="addToBasket(this)" id="item10" value="9">$9 - Beyond Meat Burger</button>
-    </div>
-    <br />
-    <br />
-    <div>
-      <button id="submitCartButton" onclick="submitBasket()">
-        Submit Cart
-      </button>
-    </div>
-    <br />
-    <br />
-    <div>
-      <button id="goToCartPageButton" onclick="goToCartPage()">
-        Go To Cart
-      </button>
+      <div>
+        <button id="goToCartPageButton" onclick="goToCartPage()">
+          Go To Cart
+        </button>
 
-      <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
-        Go To Customer
-      </button>
-    </div>
-
+        <button id="goToCustomerPageButton" onclick="goToCustomerPage()">
+          Go To Customer
+        </button>
+      </div>
+    </center>
     <script>
       var currentBasket = [];
       function addToBasket(item) {
@@ -59,9 +81,9 @@
       }
 
       function submitBasket() {
-        currentBasket.sort()
+        currentBasket.sort();
         localStorage.setItem("basket", currentBasket);
-        alert("Submitted Basket")
+        alert("Submitted Basket");
       }
 
       function goToCartPage() {
