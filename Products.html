@@ -15,43 +15,43 @@
       </div>
 
       <div>
-        <button onclick="addToBasket(this)" id="item1" value="10">
+        <button onclick="addToBasket(this)" id="item1" price=10>
           $10 - Chicken
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item2" value="8">
+        <button onclick="addToBasket(this)" id="item2" price=8>
           $8 - Beef
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item3" value="6">
+        <button onclick="addToBasket(this)" id="item3" price=6>
           $6 - Blue Berries
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item4" value="4">
+        <button onclick="addToBasket(this)" id="item4" price=4>
           $4 - Apples
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item5" value="2">
+        <button onclick="addToBasket(this)" id="item5" price=2>
           $2 - Soft Drink
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item6" value="1">
+        <button onclick="addToBasket(this)" id="item6" price=1>
           $1 - Candy
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item7" value="3">
+        <button onclick="addToBasket(this)" id="item7" price=3>
           $3 - Loaf of Bread
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item8" value="5">
+        <button onclick="addToBasket(this)" id="item8" price=5>
           $5 - Cake
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item9" value="7">
+        <button onclick="addToBasket(this)" id="item9" price=7>
           $7 - Granola Bar
         </button>
         <br />
-        <button onclick="addToBasket(this)" id="item10" value="9">
+        <button onclick="addToBasket(this)" id="item10" price=9>
           $9 - Beyond Meat Burger
         </button>
       </div>
@@ -77,12 +77,15 @@
     <script>
       var currentBasket = [];
       function addToBasket(item) {
-        currentBasket.push(item.innerHTML);
+        var price = parseFloat(item.getAttribute('price'));
+        var name = item.innerText.split(' - ')[1];
+        currentBasket.push({name: name, price: price});
       }
 
       function submitBasket() {
-        currentBasket.sort();
-        localStorage.setItem("basket", currentBasket);
+        currentBasket.sort((a, b) => a.price - b.price);
+        localStorage.setItem("basket", JSON.stringify(currentBasket));
+        alert(currentBasket.toString())
         alert("Submitted Basket");
       }
 

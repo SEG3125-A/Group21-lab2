@@ -34,10 +34,10 @@
 
     <script>
       var currentBasket = document.getElementById("currentBasket");
-      items = localStorage.getItem("basket").split(",");
+      var items = JSON.parse(localStorage.getItem("basket") || '[]');
       window.onload = (event) => {
         for (var i = 0; i < items.length; i++) {
-          currentBasket.innerHTML += items[i] + "\n";
+          currentBasket.innerHTML += "$"+items[i].price + " - " + items[i].name + "\n";
         }
       };
 
