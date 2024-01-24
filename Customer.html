@@ -15,25 +15,22 @@
       <br />
 
       <div>
-        <input type="checkbox" id="glutenOption" />
-        <label for="glutenOption">Are you allergic to gluten?</label>
+        <input type="checkbox" id="noGlutenOption" />
+        <label for="noGlutenOption">Are you allergic to gluten?</label>
       </div>
 
       <br />
 
       <div>
-        <label>Would you prefer inorganic or organic products?</label>
+        <input type="checkbox" id="organicOption" />
+        <label for="organicOption">Do you prefer organic?</label>
       </div>
 
+      <br />
+
       <div>
-        <label for="inorganicOption">Inorganic Only</label>
-        <input type="radio" id="inorganicOption" name="ganic" />
-        <br />
-        <label for="organicOption">Organic Only</label>
-        <input type="radio" id="organicOption" name="ganic" />
-        <br />
-        <label for="bothOption">Both</label>
-        <input type="radio" id="bothOption" name="ganic" />
+        <button id="saveButton" onclick="saveChanges()">Save Changes</button>
+        <button id="resetButton" onclick="resetChanges()">Reset Options</button>
       </div>
 
       <br />
