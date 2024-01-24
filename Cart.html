@@ -28,31 +28,10 @@
       <br />
 
       <div>
-        <button id="resetButton" onclick="resetCart()">Reset Cart</button>
+        <button id="checkoutButton" onclick="resetCart()">Checkout</button>
       </div>
     </center>
 
-    <script>
-      var currentBasket = document.getElementById("currentBasket");
-      var items = JSON.parse(localStorage.getItem("basket") || '[]');
-      window.onload = (event) => {
-        for (var i = 0; i < items.length; i++) {
-          currentBasket.innerHTML += "$"+items[i].price + " - " + items[i].name + "\n";
-        }
-      };
-
-      function goToProductsPage() {
-        window.location.href = "Products.html";
-      }
-
-      function goToCustomerPage() {
-        window.location.href = "Customer.html";
-      }
-
-      function resetCart() {
-        currentBasket.innerHTML = "";
-        localStorage.setItem("basket", "");
-      }
-    </script>
+    <script src="Cart.js"></script>
   </body>
 </html>
