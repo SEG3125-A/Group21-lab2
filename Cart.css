@@ -1,14 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #ffffff;
     color: #333;
     text-align: center;
     margin: 0;
     padding: 0;
 }
+* {background-color: black}
 
 h1, h2, h3 {
-    color: #333;
+    color: rgb(255, 255, 255)afa;
+}
+
+textarea{
+    color:white
 }
 
 ul {
@@ -35,7 +40,7 @@ button {
 
 
 #footer {
-    background-color: #333;
+    background-color: #000000;
     color: white;
     text-align: center;
     padding: 10px 0;
