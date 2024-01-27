@@ -1,11 +1,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: #eaeaea;
+    color: #ffffff;
     text-align: center;
     margin: 0;
     padding: 0;
 }
+* {background-color: black}
+
 
 input[type=text], select, textarea {
     width: 80%;
@@ -17,9 +19,9 @@ input[type=text], select, textarea {
     box-sizing: border-box;
 }
 
-input[type=submit],
-button {
-    width: 50%;
+input[type=submit] {
+    width: 80%;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -27,19 +29,15 @@ button {
     border-radius: 4px;
     cursor: pointer;
 }
-
-input[type = "submit"]{
-    background-color: #4CAF50;
-    color: white;
-}
 button {
     background-color: #008CBA;
     color: white;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-}
-
-button:hover{
-    background-color: #4CAF50;
 }
 
 .container {
